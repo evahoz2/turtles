@@ -5,6 +5,7 @@
         <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
         <script src="movement.js"></script>
+        <script src="game.js"></script>
     </head>
     <body>
 <a-scene physics="gravity:0">
@@ -16,13 +17,21 @@
     </a-assets>
         <a-sky src="#ig" rotation="-180 10 0"></a-sky>
         <a-entity gltf-model="#isd" position="-10 -25 -12" scale="3 3 3"></a-entity>
-        <a-entity id="cam" kinematic-body look-controls wasd-controls="accelaration:200" camera position="-10 -18 -20" rotation="-6 -0.5 0"></a-entity>
+        <a-entity id="cam" kinematic-body look-controls wasd-controls="accelaration:200" camera position="-10 -18 -20" rotation="-6 -0.5 0">
+            <a-entity position="-5 -5 -12">
+                <a-entity position="-0.6 0.13 0" text="font: aileronsemibold; width: 12; color:white; value: TURTLES\n To Be RESCUED"></a-entity>
+                <a-entity id=count position="-8 0.3 0" text="font:exo2bold; align:center; width: 30; color:white; value: 5"></a-entity>
+                <a-entity position="15 0.3 0" text="font:exo2bold; align:center; width: 30; color:white;"></a-entity>
+           
+            </a-entity>
+        </a-entity>
         <a-entity gltf-model="#cart" id="mel" position="-4 -24 5" scale="3 3 3" ></a-entity>
         <a-entity gltf-model="#res" movement position="0 -25 5" rotation="0 180 0" scale="3 3 3" static-body="shape:sphere; sphereRadius: 6"></a-entity>
-        <a-entity gltf-model="#cart" id="ali" position="-25 -19 16" scale="3 3 3" ></a-entity>
-        <a-entity gltf-model="#cart" id="evi" position="14 -22 5" scale="3 3 3" ></a-entity>
-        <a-entity gltf-model="#cart" id="lav" position="-43 -24 12" scale="3 3 3" ></a-entity>
-        <a-entity gltf-model="#cart" id="uma" position="20 -24 -12" scale="3 3 3" ></a-entity>
+        <a-entity gltf-model="#cart" id="ali" position="-25 -19 16" scale="3 3 3" static-body="shape:sphere; sphereRadius: 6"></a-entity>
+        <a-entity gltf-model="#cart" id="evi" position="14 -22 5" scale="3 3 3" static-body="shape:sphere; sphereRadius: 6"></a-entity>
+        <a-entity gltf-model="#cart" id="lav" position="-43 -24 12" scale="3 3 3" static-body="shape:sphere; sphereRadius: 6"></a-entity>
+        <a-entity gltf-model="#cart" id="uma" position="20 -24 -12" scale="3 3 3" static-body="shape:sphere; sphereRadius: 6"></a-entity>
+        
     
 
 </a-scene>
