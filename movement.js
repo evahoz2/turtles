@@ -25,4 +25,14 @@ AFRAME.registerComponent('movement',{
         
        }); 
     },
-})
+    tick: function(){
+        camera= document.getElementById('cam')
+        camera_position= camera.getAttribute('position');
+        this.el.setAttribute("position",{
+            x: camera_position.x-0,
+            y:camera_position.y-9,
+            z:camera_position.z-9,
+
+            });
+    },
+});
